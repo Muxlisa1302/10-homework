@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Note Detail</title>
+</head>
+<body>
+    <h1 style="color:teal">Note Detail</h1>
+    <h3>Note: {{ note.note_title }}</h3>
+    <h3>Content: {{ note.content }}</h3>
+    <button><a href="{% url 'notes:list' %}">Back to Note List</a></button>
+</body>
+</html>

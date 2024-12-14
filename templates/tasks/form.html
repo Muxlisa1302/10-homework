@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Task</title>
+</head>
+<body>
+  <h1 style="color:teal">Create Task</h1>
+  <form method="post">
+    {% csrf_token %}
+    <label for="task_title">Task title</label><br>
+    <input type="text" name="task_title" id="task_title" value="{{ task.task_title }}"><br><br>
+    <label for="due_date">Due Date</label><br>
+    <input type="date" name="due_date" id="due_date" value="{{ task.due_date }}"><br><br>
+    <label for="description">Description</label><br>
+    <input type="text" name="description" id="description" value="{{ task.description }}"><br><br>
+    <button type="submit">Create Task</button><br><br>
+    <button><a href="{% url 'tasks:list' %}">Back to Task List</a></button>
+  </form>
+</body>
+</html>
